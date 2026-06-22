@@ -1,0 +1,57 @@
+{
+  "name": "银发健康监护-老人端",
+  "appid": "__UNI__SILVER_ELDER",
+  "description": "居家银发多模态健康监护系统-老人端小程序",
+  "versionName": "1.0.0",
+  "versionCode": "100",
+  "transformPx": false,
+  "app-plus": {
+    "usingComponents": true,
+    "nvueStyleCompiler": "uni-app",
+    "compilerVersion": 3,
+    "splashscreen": {
+      "alwaysShowBeforeRender": true,
+      "waiting": true,
+      "autoclose": true,
+      "delay": 0
+    },
+    "modules": {},
+    "distribute": {
+      "android": {
+        "permissions": [
+          "<uses-permission android:name=\"android.permission.CAMERA\"/>",
+          "<uses-permission android:name=\"android.permission.RECORD_AUDIO\"/>",
+          "<uses-permission android:name=\"android.permission.WAKE_LOCK\"/>"
+        ]
+      },
+      "ios": {}
+    }
+  },
+  "mp-weixin": {
+    "appid": "",
+    "setting": {
+      "urlCheck": false,
+      "es6": true,
+      "postcss": true,
+      "minified": true
+    },
+    "usingComponents": true,
+    "permission": {
+      "scope.camera": {
+        "desc": "监护功能需要相机权限，用于识别居家行走、跌倒、睡眠状态"
+      },
+      "scope.record": {
+        "desc": "情绪监测需要麦克风权限，用于分析日常语音情绪和夜间异响"
+      }
+    },
+    "requiredPrivateInfos": []
+  },
+  "uniStatistics": {
+    "enable": false
+  },
+  "h5": {
+    "devServer": {
+      "port": 8081
+    }
+  }
+}
